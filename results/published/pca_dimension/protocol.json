@@ -1,0 +1,29 @@
+{
+  "dimensions": [
+    16,
+    32,
+    64,
+    128
+  ],
+  "pca_fit": "original training embeddings only",
+  "pca_random_state": 42,
+  "lda_fit": "same saved 120 indices and 12-class labels",
+  "lda_components": 11,
+  "downstream_splits": "saved gamma-only full indices",
+  "classifier": "unscaled LDA features; balanced RBF-SVM",
+  "C_grid": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "gamma_grid": [
+    "scale",
+    0.01,
+    0.1,
+    1.0
+  ],
+  "selection": "validation macro-F1, then accuracy",
+  "final_fit": "training split only",
+  "note": "All PCA dimensions, including 64, are refitted. Original saved PCA64 features are not mixed into the primary sensitivity comparison."
+}

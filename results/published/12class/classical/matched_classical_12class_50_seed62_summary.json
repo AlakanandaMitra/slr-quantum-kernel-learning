@@ -1,0 +1,7 @@
+{
+  "run_name": "matched_classical_12class_50_seed62",
+  "total_wall_time_sec": 24.301492413505912,
+  "best_model_by_test_macro_f1": "RBF-SVM",
+  "best_test_macro_f1": 0.2761505033022319,
+  "best_test_accuracy": 0.502
+}

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or reproducibility package, please cite the associated manuscript."
+title: "Supervised Latent Restructuring and Adaptive Quantum Kernels for Small-Data Plant Disease Classification"
+type: software
+authors:
+  - family-names: "Mitra"
+    given-names: "Alakananda"
+  - family-names: "Fleisher"
+    given-names: "David H."
+  - family-names: "Ray"
+    given-names: "Chittaranjan"
+  - family-names: "Reddy"
+    given-names: "Vangimalla R."

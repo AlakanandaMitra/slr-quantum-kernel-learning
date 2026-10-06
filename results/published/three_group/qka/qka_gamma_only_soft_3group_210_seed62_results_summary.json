@@ -1,0 +1,16 @@
+{
+  "test_accuracy": 0.5525846702317291,
+  "test_macro_f1": 0.5545140291806958,
+  "test_weighted_f1": 0.5572847908676786,
+  "selected_C": 10.0,
+  "best_iteration": 30,
+  "final_training_alignment": 0.1383659988641739,
+  "num_train": 630,
+  "num_val": 150,
+  "num_test": 561,
+  "trainable_parameter_count": 11,
+  "objective_evaluations": 900,
+  "spsa_time_sec": 4561.5027385500725,
+  "final_kernel_time_sec": 8.605796162970364,
+  "total_wall_time_sec": 4574.059937234968
+}

@@ -1,0 +1,22 @@
+{
+  "model": "RBF-SVM",
+  "train_per_group": 100,
+  "seed": 62,
+  "train_seed": 62,
+  "validation_seed": 63,
+  "test_seed": 64,
+  "num_train": 300,
+  "num_val": 150,
+  "num_test": 561,
+  "selected_C": 1.0,
+  "selected_gamma": "scale",
+  "best_val_macro_f1": 0.6524805658425917,
+  "best_val_accuracy": 0.6533333333333333,
+  "test_accuracy": 0.6524064171122995,
+  "test_macro_f1": 0.6430988796613315,
+  "test_weighted_f1": 0.6497030659794178,
+  "search_time_sec": 0.10660073603503406,
+  "final_fit_predict_time_sec": 0.008525954093784094,
+  "total_wall_time_sec": 0.11512669012881815,
+  "representation": "SLR (PCA64->LDA11), unscaled classical input"
+}

@@ -1,0 +1,4 @@
+target_a,target_b,n,mean_difference_a_minus_b,wilcoxon_statistic,wilcoxon_p_value
+soft,hard,5,0.0015933749892138582,1.0,0.5
+soft,randomized,5,0.0018023437965523303,6.0,0.8125
+hard,randomized,5,0.0002089688073384721,7.0,1.0
