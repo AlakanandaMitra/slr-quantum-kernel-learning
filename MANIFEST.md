@@ -215,6 +215,15 @@ The EfficientNet-B0 embeddings can be regenerated using `src/embeddings/extract_
 
 ## Single-seed three-group quantum-kernel experiments
 
+### Exact single-seed sampling indices
+
+- Location: `splits/single_seed_qka/`
+- Training sizes: 100, 150, and 210 samples per group.
+- Each directory contains exact train, validation, and test indices.
+- The `[0,1]` and `[0,pi]` encoding experiments use identical sampling indices.
+- Training, validation, and test sampling seeds are 42, 43, and 44, respectively.
+- These indices support Table 9 and Supplementary Tables S8–S9.
+
 ### Soft-target γ-only QKA and encoding-range sensitivity
 
 - `[0,1]` implementation: `src/experiments/single_seed_qka/qka_soft_target_3group.py`
