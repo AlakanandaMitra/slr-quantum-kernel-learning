@@ -208,7 +208,18 @@ The following are intentionally not stored in Git:
 - Full kernel matrices
 - Large trained model binaries
 - Exploratory notebooks
-- Historical superseded experiments
+- Superseded exploratory experiments not reported in the manuscript
 - Debugging outputs and logs
 
 The EfficientNet-B0 embeddings can be regenerated using `src/embeddings/extract_efficientnet_b0.py`.
+
+## Single-seed three-group quantum-kernel experiments
+
+### Soft-target γ-only QKA and encoding-range sensitivity
+
+- `[0,1]` implementation: `src/experiments/single_seed_qka/qka_soft_target_3group.py`
+- `[0,pi]` implementation: `src/experiments/single_seed_qka/qka_soft_target_3group_0pi.py`
+- Published summaries: `results/published/single_seed_qka/`
+- Training sizes: 100, 150, and 210 samples per group
+- These experiments support the single-seed QKA results in Table 9, the QKA encoding-range comparison in Table S8, and the QKA runtime diagnostics in Table S9.
+- The reported adaptive experiments optimize only the 11 feature-scaling parameters γ; no trainable post-encoding ansatz is used.

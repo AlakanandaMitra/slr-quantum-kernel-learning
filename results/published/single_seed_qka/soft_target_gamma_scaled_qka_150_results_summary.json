@@ -1,0 +1,11 @@
+{
+  "test_accuracy": 0.5882352941176471,
+  "test_macro_f1": 0.5884923650638557,
+  "test_weighted_f1": 0.59082384446559,
+  "selected_C": 1.0,
+  "num_train": 450,
+  "num_val": 150,
+  "num_test": 561,
+  "kernel_time_sec": 7.348113798070699,
+  "total_wall_time_sec": 3305.4786626454443
+}

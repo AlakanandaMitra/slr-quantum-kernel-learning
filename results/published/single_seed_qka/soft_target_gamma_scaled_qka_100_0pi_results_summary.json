@@ -1,0 +1,13 @@
+{
+  "run_name": "soft_target_gamma_scaled_qka_100_0pi",
+  "encoding": "[0, pi]",
+  "test_accuracy": 0.37076648841354726,
+  "test_macro_f1": 0.36842698737447543,
+  "test_weighted_f1": 0.3712790971024794,
+  "selected_C": 1.0,
+  "num_train": 300,
+  "num_val": 150,
+  "num_test": 561,
+  "kernel_time_sec": 6.317845785059035,
+  "total_wall_time_sec": 2228.3920665690675
+}

@@ -1,7 +1,7 @@
 
-numpy
+numpy==2.2.5
 
-pandas
+pandas==2.3.3
 
 scipy
 
@@ -15,7 +15,7 @@ Pillow
 
 torch==2.5.1
 
-torchvision
+torchvision==0.20.1
 
 xgboost==3.2.0
 

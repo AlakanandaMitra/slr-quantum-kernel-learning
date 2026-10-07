@@ -64,8 +64,6 @@ results/
 
     PCA64 arrays, fitted PCA64/LDA11 models, and LDA fitting indices
 
-
-
   published/
 
     Lightweight numerical results underlying the manuscript
@@ -77,8 +75,6 @@ splits/
   12class/
 
     Exact five-seed 12-class sampling indices
-
-
 
   three_group/
 
@@ -92,37 +88,32 @@ src/
 
     Dataset utilities
 
-
-
   embeddings/
 
     EfficientNet-B0 feature extraction
-
-
 
   classical/
 
     Classical baseline and matched classical experiments
 
-
-
   quantum/
 
     Fixed quantum-kernel and gamma-only QKA experiments
 
-
-
   experiments/
 
-    Ablations, sensitivity analyses, and target controls
-
-
+    Ablations, sensitivity analyses, target controls, and single-seed QKA experiments
 
   analysis/
 
     Aggregation, statistical analysis, diagnostics, and plotting
 
+```
+
+
+
 See `MANIFEST.md` for the detailed mapping between experiments, code, exact splits, and published numerical outputs.
+
 
 ## Experimental protocol
 
@@ -183,6 +174,49 @@ python src/classical/run_matched_classical_12class_5seed.py
 ```bash
 python src/quantum/qka_gamma_only_soft_3group.py --help
 ```
+
+### Single-seed soft-target γ-only QKA
+
+
+
+The initial single-seed three-group experiments used γ-only QKA with
+
+11 trainable feature-scaling parameters and no trainable post-encoding
+
+ansatz. Experiments were evaluated at 100, 150, and 210 training
+
+samples per group.
+
+
+
+The `[0,1]` implementation is:
+
+
+
+```bash
+
+python src/experiments/single_seed_qka/qka_soft_target_3group.py
+
+```
+
+
+
+The `[0,π]` encoding-sensitivity implementation is:
+
+
+
+```bash
+
+python src/experiments/single_seed_qka/qka_soft_target_3group_0pi.py
+
+```
+
+
+
+Saved numerical summaries supporting Table 9 and Supplementary
+
+Tables S8--S9 are provided in `results/published/single_seed_qka/`.
+
 
 ### Matched three-group baselines
 
