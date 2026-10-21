@@ -1,0 +1,10 @@
+{
+  "purpose": "Exploratory classical-only downstream RBF-SVM comparisons",
+  "shared_representation_fit": "PCA64 original training partition; LDA11 120 balanced original 12-class training samples",
+  "direct_lda_fit": "Raw 1280-D embeddings of identical 120 fine-label samples",
+  "subset_refit": "Reuse exact saved original train-only PCA64 arrays; refit LDA11 on each downstream train subset's original 12-class labels",
+  "classifier": "Unscaled RBF SVC, gamma searched over scale, 0.01, 0.1, 1.0; class_weight=balanced; C chosen on validation macro-F1, accuracy tie-break, then first candidate in grid order; train-only final fit",
+  "test": "Identical held-out test indices within each seed and training size; test subsets may differ across seeds",
+  "limitation": "Shared SLR and direct LDA use 120 representation-fitting labels, some outside downstream training subset; subset-refit LDA uses downstream fine labels; comparisons are conditional, not equal-label-budget end-to-end comparisons",
+  "note": "Saved PCA64 arrays reproduce the existing SLR features exactly; raw embeddings transformed anew by the saved PCA model differ numerically and are not substituted. No quantum experiment is executed or modified. Results are exploratory until independently reviewed."
+}

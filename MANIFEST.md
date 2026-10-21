@@ -232,3 +232,49 @@ The EfficientNet-B0 embeddings can be regenerated using `src/embeddings/extract_
 - Training sizes: 100, 150, and 210 samples per group
 - These experiments support the single-seed QKA results in Table 9, the QKA encoding-range comparison in Table S8, and the QKA runtime diagnostics in Table S9.
 - The reported adaptive experiments optimize only the 11 feature-scaling parameters γ; no trainable post-encoding ansatz is used.
+
+## Post-acceptance representation-fitting audit (Table 14)
+
+- Code: `src/experiments/audit_lda_classical_only_v3.py`
+- Per-run results: `results/published/ablations/lda_classical_only_v3_per_run.csv`
+- Summary: `results/published/ablations/lda_classical_only_v3_summary.csv`
+- Protocol: `results/published/ablations/lda_classical_only_v3_protocol.json`
+- Evaluates shared PCA64->LDA11, direct LDA11, and subset-refitted PCA64->LDA11.
+- Uses 100, 150, and 210 training samples per group across five seeds.
+- Uses the original matched RBF-SVM C and gamma search.
+- All 15 shared-SLR results reproduce the principal classical baseline exactly.
+- The 45 per-run records and nine aggregate summaries were independently checked.
+- Supports Table 14 and Section V-H.
+- The original v2 audit is retained for provenance; v3 is authoritative for Table 14.
+
+## Representative direct-LDA fixed quantum-kernel diagnostic
+
+- Code: `src/experiments/run_direct_lda_fixed_qk_diagnostic.py`
+- Results: `results/published/direct_lda_fixed_qk/`
+- Training: 150 samples per group, seed 42.
+- Validation: 150 samples; test: 561 samples.
+- Compares shared PCA64->LDA11 with direct LDA11 fitted using the same 120 original fine-class-labeled training samples.
+- Uses identical downstream splits and independently fitted training-only [0,1] scaling.
+- Reuses the original 11-qubit fixed fidelity-kernel implementation.
+- Shared-SLR test Macro-F1: 0.5832920607366279.
+- Direct-LDA test Macro-F1: 0.6090867393697446.
+- Direct-minus-shared difference: +0.025794678633116686.
+- The shared-SLR reference was reproduced exactly.
+- This is a representative single-seed diagnostic, not a five-seed or fully equal-data-budget comparison.
+- Supports the additional direct-LDA discussion in Section V-H.
+
+### Reproduction dependencies
+
+The two archived scripts preserve their original Atlas experimental paths and imports.
+They are not standalone repository-native entry points without adaptation.
+
+The full 1280-dimensional EfficientNet-B0 embeddings and saved intermediate
+SLR feature arrays are not redistributed. Raw embeddings can be regenerated
+using `src/embeddings/extract_efficientnet_b0.py` and the original dataset.
+The fitted PCA64/LDA11 artifacts and exact three-group sampling indices
+are included in this repository.
+
+The numerical results are provided for verification without rerunning
+the computational experiments. Re-execution requires reconstructing
+the expected input arrays and adapting the archived scripts to the
+repository's paths and module layout.
