@@ -261,8 +261,16 @@ Large statevectors, full kernel matrices, trained classifier binaries, and full 
 
 ## Citation
 
-See `CITATION.cff`.
+If you use this code or the associated experimental results, please cite:
+
+Mitra, A., Fleisher, D. H., Ray, C., and Reddy, V. R. "Supervised Latent Restructuring for Fixed and Adaptive Quantum Kernel Learning in Small-Data Image Classification." IEEE Access, accepted for publication, 2026.
+
+The DOI and final bibliographic details will be added when available.
+
+See [CITATION.cff](CITATION.cff) for citation metadata.
 
 ## License
 
-See `LICENSE`.
+See [LICENSE](LICENSE) for the applicable software license.
+
+The original Plant Pathology 2021 dataset is not redistributed and remains subject to its original terms of use. Third-party dependencies retain their respective licenses.
