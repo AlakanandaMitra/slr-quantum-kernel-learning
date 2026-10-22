@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this software or reproducibility package, please cite the associated manuscript."
-title: "Supervised Latent Restructuring and Adaptive Quantum Kernels for Small-Data Plant Disease Classification"
+message: "If you use this software or reproducibility package, please cite the associated IEEE Access publication."
+title: "Supervised Latent Restructuring for Fixed and Adaptive Quantum Kernel Learning in Small-Data Image Classification"
 type: software
 authors:
   - family-names: "Mitra"
@@ -11,5 +11,4 @@ authors:
     given-names: "Chittaranjan"
   - family-names: "Reddy"
     given-names: "Vangimalla R."
-
 repository-code: "https://github.com/AlakanandaMitra/slr-quantum-kernel-learning"
